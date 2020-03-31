@@ -23,8 +23,6 @@ public class Project_10
 	{
 		PrintWriter writer = new PrintWriter(new File(filename));
 		
-		int row 	= 0;
-		int col 	= 0;
 		int color 	= 255; // 255 <- grayscale
 		
 		// Construct the Image ----------------------------------------------------------------
@@ -33,16 +31,15 @@ public class Project_10
 			writer.println(color);									// 255
 
 			// Create the Actual Image
-			for (row = 0; row < image.length; ++row)
+			for (int row = 0; row < image.length; ++row)
 			{
-				for (col = 0; col < image[0].length; ++col)
+				for (int col = 0; col < image[0].length; ++col)
 				{
 					image[row][col] = color;
 				}				
 				
 				// writer.println(image); 		// this is what prints the full array (height width)
 				writer.println(color + " " + color); 			// Make shift way to get only values
-
 			}
 					
 		// Close the File ---------------------------------------------------------------------

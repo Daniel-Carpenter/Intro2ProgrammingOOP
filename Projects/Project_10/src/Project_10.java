@@ -32,7 +32,7 @@ public class Project_10
 	{
 		PrintWriter writer = new PrintWriter(new File(filename));
 		
-		int color 	= 255; // 255 <- grayscale
+		int color = 255; // 255 <- grayscale
 		
 		// Construct the Image ----------------------------------------------------------------
 			writer.println("P2"); 									// P2
@@ -57,8 +57,8 @@ public class Project_10
 	}
 	public static int[][] createVerticalStripes(int height, int width, int stripeWidth)
 	{
-		final int white 	= 0; // 255 <- grayscale
-		final int black 	= 255;
+		final int white = 0; // 255 <- grayscale
+		final int black = 255;
 		int color = black;
 					
 		int[][] array = new int[height][width];
@@ -80,6 +80,8 @@ public class Project_10
 						color = white;
 					}
 				}
+				
+				array[row][col] = color;
 			}
 		}
 	

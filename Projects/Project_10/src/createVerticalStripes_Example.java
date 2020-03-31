@@ -32,6 +32,7 @@ public class createVerticalStripes_Example
 							color = white;
 						}
 					}
+					array[row][col] = color;
 				}
 				
 				System.out.println(Arrays.toString(array[row]));

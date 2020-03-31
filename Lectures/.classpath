@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="Lecture Code/final/access_modification"/>
+	<classpathentry kind="src" path="Lecture Code/final/aggregation"/>
+	<classpathentry kind="src" path="Lecture Code/final/building_new_classes"/>
+	<classpathentry kind="src" path="Lecture Code/midterm1/arithmetic_operators"/>
+	<classpathentry kind="src" path="Lecture Code/midterm1/storing_primitive_data"/>
+	<classpathentry kind="src" path="Lecture Code/midterm1/user_interaction"/>
+	<classpathentry kind="src" path="Lecture Code/midterm2/arrays_primitive_data"/>
+	<classpathentry kind="src" path="Lecture Code/midterm2/for_loops"/>
+	<classpathentry kind="src" path="Lecture Code/midterm2/methods"/>
+	<classpathentry kind="src" path="Lecture Code/midterm2/methods_references"/>
+	<classpathentry kind="src" path="Lecture Code/midterm2/perfect_size_oversize_arrays"/>
+	<classpathentry kind="src" path="Lecture Code/midterm2/while_loops"/>
+	<classpathentry kind="src" path="Lecture Code/midterm3/nested_loops"/>
+	<classpathentry kind="src" path="Lecture Code/midterm3/sorting_algorithms"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

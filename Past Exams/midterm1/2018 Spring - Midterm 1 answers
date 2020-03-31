@@ -1,0 +1,103 @@
+boolean = boolean
+cast = only applies to variable in front of it
+
+int numMedals;
+double skateScore;
+String toeLoop;
+char numRevSkater;
+boolean isTripleAxle;
+
+
+
+2
+	a	1
+	b	12 / 18 = 1 remainder 6
+		6
+	c	18.0/12
+		1.5
+	d	5.0
+	e	3.91.1
+
+	
+3
+	int lutz = 35;
+	int axel = 4;
+	int salchow = 9;
+	double loop = 1.5;
+	double toeLoop = 30.9;
+	int flip = 10;
+	
+	if (shirts == 1)
+	{
+		cost = ONE
+	}
+	
+	else if (shirts > 1 && shirts < 11)
+	{
+		cost = ONE + TWO_TO_TEN * shirts
+	}
+	
+	else (shirts >= 11)
+	{
+		cost = ONE + TWO_TO_TEN * 9 + ELEVEN_PLUS * (shirts - 10)
+	}
+	if (cost > 100
+	}
+	
+	
+	
+	
+6
+
+	import java.util.Scanner;
+	
+	Scanner keyboard = new Scanner (System.in);
+	
+	System.out.println("Name?")
+	keyboard.nextLine()
+	
+	System.out.println("")
+	
+	System.out.println("")
+	System.out.println("")
+	System.out.println("")
+	
+	
+	
+	
+	import java.util.Scanner;
+	
+	public class name_of_project {
+		public static void main(String[] args) {
+	
+	Scanner input = new Scanner (System.in);
+	
+	System.out.println("name?");
+		String name = input.nextLine();
+	
+	System.out.println("Email?")
+		String email = input.nextLine();
+	
+	System.out.println("How many times contacted?")
+		int numContacted = input.nextInt();
+	
+	System.out.println("Problem solved?")
+		boolean probSolved = input.nextBoolean();
+
+
+
+		}
+
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

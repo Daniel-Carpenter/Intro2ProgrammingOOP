@@ -1,0 +1,53 @@
+1.
+	Boolean isSellingPSL;
+	char sizeOfDrink;
+	double priceOfDrink;
+	String saleDatePSL;
+	int numSoldPSL;
+	int gramsSugarPSL;
+	
+2.
+	a. 42 / 9 		= 4
+	b. 48 % 7 		= 6
+	c. 12.5 * 2 	= 25.0
+****d. "2019" + "09" = 201909
+****e. 17 / 4 + 3 % 8
+		4 + 3
+		4
+
+	f. (int) 19.99	= 19
+	
+	g. (double) 4 / 5 - 5
+		4.0 / 5 - 5
+		0.8 - 5
+		-4.2
+
+3.
+	int bamboo = 7;
+	int succulents = 4;
+	double moneyTree = 35.2;
+	int iris = 10;
+	int bonsai = 9;
+	
+	a.	int result = bamboo + iris / succulents;
+		int result = 7 + 10 / 4
+		7 + 2
+		9
+	
+	b.	int result = bonsai + succulents * succulents % bamboo - iris;
+		9 + 4 * 4 % 7
+		9 + 16 % 7
+		9 + 2
+		11
+	
+	c.  double result = bamboo * bonsai + moneyTree;
+		7 * 9 + 35.2
+		63 + 35.2
+		98.2
+	
+	d.	math.ceil(35.2)
+		33
+	
+4.
+	totalCostOfBudger = pricePerBurger * (guests * burgerPerGuest+ extraBurger)
+	litersOfLemonade = Math.floor((partyBudget - totalCostOfBurger) / pricePerLiter))

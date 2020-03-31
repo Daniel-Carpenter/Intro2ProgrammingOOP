@@ -2,37 +2,28 @@ import java.util.Arrays;
 
 public class createDiagonalStripes_Example 
 {
+	public static void main(String[] args)
 	{
-		int height		= 3;
-		int width		= 3;
-		int stripeWidth	= 1;
+		int height		= 4;
+		int width		= 4;
+		int stripeWidth	= 2;
 		
 		// METHOD BELOW ----------------------------------------------			
 			final int white 	= 0; // 255 <- grayscale
 			final int black 	= 255;
-			int color = white;
+			int color = black;
 						
 			int[][] array = new int[height][width];
 			
 			// Create the Actual array
 			for (int row = 0; row < array.length; ++row)
 			{
-				// OUTER LOOP --------------------------------------------
-					if (row % stripeWidth == 0)
-					{
-						if (color == white)
-						{
-							color = black;
-						}
-						else
-						{
-							color = white;
-						}
-					}
+				// OUTER LOOP -------------------------------------------- // GO THROUGH LOOP TO MAKE DIAGONAL
+
 				// INNER LOOP --------------------------------------------
 					for (int col = 0; col < array[0].length; ++col)
 					{						
-						if (col % stripeWidth == 0)
+						if ((col + row) % stripeWidth == 0)
 						{
 							if (color == white)
 							{
@@ -51,3 +42,5 @@ public class createDiagonalStripes_Example
 			}
 	}
 }
+
+

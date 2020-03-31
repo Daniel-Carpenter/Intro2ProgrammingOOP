@@ -1,0 +1,34 @@
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+import java.io.File;
+
+
+public class Nested_Loops 
+{
+	public static void main(String[] args) throws FileNotFoundException
+	{
+		// READ IN FILE
+		Scanner file = new Scanner(new File ("TestData.txt"));
+		int numberStudents = file.nextInt();
+		file.nextLine();
+		
+		final int NUMBER_TESTS = 5; //constant because doesnt change
+		
+		
+		/* outer loop reads one line of the file and adds 
+		 * one student's data to the running sum */
+		
+		// OUTER:
+			for (int students = 0; students < numberStudents; ++students)
+			{
+				for (int tests = 0; tests < NUMBER_TESTS; ++tests)
+				{
+					
+				}
+			}
+		
+		
+		// Inner loop adds up the numbers
+	}
+
+}

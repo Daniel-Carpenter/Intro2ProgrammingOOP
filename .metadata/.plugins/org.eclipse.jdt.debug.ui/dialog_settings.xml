@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="expressionHistory">
+		<item key="expressionHistoryEntry_0" value="[[1, 0, 0, 0, 0, 0, 0&#x09;, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [393216, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [class ForLoops, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null], [34363979840, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], null]"/>
+		<item key="expressionHistoryEntryCount" value="1"/>
+	</section>
+	<section name="org.eclipse.jdt.internal.debug.ui.ExpressionInformationControlCreator$ExpressionInformationControl">
+		<item key="WIDTH" value="812"/>
+		<item key="HEIGHT" value="252"/>
+		<item key="SashWeightTree" value="500"/>
+		<item key="SashWeightDetails" value="500"/>
+	</section>
+</section>

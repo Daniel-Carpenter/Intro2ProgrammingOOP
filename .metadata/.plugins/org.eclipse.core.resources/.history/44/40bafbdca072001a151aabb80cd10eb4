@@ -1,0 +1,33 @@
+
+public class Nested_Loops2 
+{
+	public static void main(String[] args)
+	{
+		
+		String[] first 	= {"a", "b", "c", "d"};
+		String[] second = {"b", "c"}; 
+		int firstIndex 	= 0;
+		int secondIndex = 0;
+		
+		// OUTER LOOP <- Does first appear in second?
+		for (firstIndex = 0; firstIndex < first.length; ++firstIndex);
+		{
+			String firstValue = first[firstIndex];
+			
+			// INNER LOOP <- steps into second to validate
+			boolean found = false;
+			for (secondIndex = 0; secondIndex < second.length; ++ secondIndex)
+			{
+				if (second[secondIndex].equals(firstValue))
+				{
+					found = true;
+				}
+			}
+		}
+		
+		if (found)
+		{
+			
+		}
+	}
+}

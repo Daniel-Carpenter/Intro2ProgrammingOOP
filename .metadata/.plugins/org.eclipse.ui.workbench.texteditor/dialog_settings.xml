@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="casesensitive" value="false"/>
+		<item key="wholeword" value="true"/>
+		<item key="isRegEx" value="false"/>
+		<item key="selection" value="checkSpelling"/>
+		<list key="findhistory">
+			<item value="spellCheck"/>
+			<item value="check"/>
+			<item value="read"/>
+			<item value="newWord"/>
+			<item value="WORD"/>
+			<item value="filename"/>
+			<item value="words"/>
+			<item value="movieTitles"/>
+		</list>
+		<list key="replacehistory">
+			<item value="checkSpelling"/>
+			<item value="word"/>
+			<item value="fileName"/>
+			<item value="dictionary"/>
+			<item value="words"/>
+			<item value="file"/>
+		</list>
+	</section>
+</section>

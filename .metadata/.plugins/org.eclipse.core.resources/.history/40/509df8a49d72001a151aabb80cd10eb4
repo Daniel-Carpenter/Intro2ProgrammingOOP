@@ -1,0 +1,18 @@
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+import java.io.File;
+
+
+public class Nested_Loops 
+{
+	public static void main(String[] args) throws FileNotFoundException
+	{
+		Scanner file = new Scanner(new file ("TestData.txt"));
+		
+		/* outer loop reads one line of the file and adds 
+		 * one student's data to the running sum */
+		
+		// Inner loop adds up the numbers
+	}
+
+}

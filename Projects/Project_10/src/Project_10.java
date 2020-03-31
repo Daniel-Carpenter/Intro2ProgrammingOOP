@@ -11,21 +11,30 @@ public class Project_10
 	{
 		// Construct Image Array --------------------------------------------------------------
 			String filename = "image.txt";
-			int row = 2;
-			int col = 12;
-			int[][] image = new int[row][col];
-			int stripeWidth = 3;
+			int row 		= 4;
+			int col 		= 6;
+			int stripeWidth = 1;
+			
+			int[][] image 	= new int[row][col];
 			
 		// Call Methods -----------------------------------------------------------------------
 			saveImage(filename, image);
 			
-			// VERTICAL ARRAY -----------------------------------------------------------------
-			int[][] verticalArray = createVerticalStripes(row, col, stripeWidth);
+			// Vertical Array -----------------------------------------------------------------
+				int[][] verticalArray = createVerticalStripes(row, col, stripeWidth);
+				for (int i = 0; i < row; ++i)
+				{
+					System.out.println(Arrays.toString(verticalArray[i]));						// need to make print
+				}
 			
-			for (int i = 0; i < row; ++i)
-			{
-				System.out.println(Arrays.toString(verticalArray[i]));	
-			}			
+			// Horizontal Array ---------------------------------------------------------------
+				System.out.println("--------------------------------------------------------"); // delete later
+				
+				int[][] horizontalArray = createHorizontalStripes(row, col, stripeWidth);
+				for (int i = 0; i < row; ++i)
+				{
+					System.out.println(Arrays.toString(horizontalArray[i]));					// need to make print
+				}
 	}
 	
 	public static void saveImage(String filename, int[][] image) throws IOException, FileNotFoundException
@@ -86,5 +95,38 @@ public class Project_10
 		}
 	
 	return array;	
+	}
+
+	public static int[][] createHorizontalStripes(int height, int width, int stripeWidth)
+	{
+		final int white 	= 0; // 255 <- grayscale
+		final int black 	= 255;
+		int color = black;
+					
+		int[][] array = new int[height][width];
+		
+		// Create the Actual array
+		for (int row = 0; row < array.length; ++row)
+		{
+			if (row % stripeWidth == 0)
+			{
+				if (color == white)
+				{
+					color = black;
+				}
+				else
+				{
+					color = white;
+				}
+			}
+			
+			for (int col = 0; col < array[0].length; ++col)
+			{
+				array[row][col] = color;
+			}
+			System.out.println(Arrays.toString(array[row]));
+		}
+		
+		return array;
 	}
 }

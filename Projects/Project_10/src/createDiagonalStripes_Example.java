@@ -15,14 +15,15 @@ public class createDiagonalStripes_Example
 						
 			int[][] array = new int[height][width];
 			
-			// Create the Actual array
+			// OUTER LOOP
 			for (int row = 0; row < array.length; ++row)
 			{
+				// INNER LOOP
 				for (int col = 0; col < array[0].length; ++col)
 				{
 						
-					array[row][col] = col + row;
-					array[row][col] = (array[row][col] + 1) % (stripWidth + 1);
+					array[row][col] = col + row; 									// make index the sum row and col indices
+					array[row][col] = (array[row][col] + 1) % (stripWidth + 1);		// add one to row/col for shifting
 					if (array[row][col] % stripWidth == 0)
 					{
 						if (color == white)

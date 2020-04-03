@@ -1,64 +1,29 @@
+// Daniel Carpenter
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Arrays;
 
-
 public class Project_10 
 {
 	public static void main(String[] args) throws IOException, FileNotFoundException
 	{
-		// Construct Image Array --------------------------------------------------------------
-			String filename = "image.txt";
+		// INPUTS TO 2D ARRAY ----------------------------------------------------------------------
 			int row 		= 250;
 			int col 		= 250;
 			int stripeWidth = 10;
 			int squareWidth = 10;
 			
-			int[][] image 	= new int[row][col];
-			
-		// Call Methods -----------------------------------------------------------------------
-			saveImage(filename, image);
-			
-			// Vertical Array -----------------------------------------------------------------
-				int[][] verticalArray = createVerticalStripes(row, col, stripeWidth);
-				for (int i = 0; i < row; ++i)
-				{
-					System.out.println(Arrays.toString(verticalArray[i]));						// need to make print
-				}
-			
-			// Horizontal Array ---------------------------------------------------------------
-				System.out.println("--------------------------------------------------------"); // delete later
-				
-				int[][] horizontalArray = createHorizontalStripes(row, col, stripeWidth);
-				for (int i = 0; i < row; ++i)
-				{
-					System.out.println(Arrays.toString(horizontalArray[i]));					// need to make print
-				}
-			
-			// Checkerboard Array ---------------------------------------------------------------
-				System.out.println("--------------------------------------------------------"); // delete later
-				
-				int[][] checkboardArray = createCheckerboard(row, col, squareWidth);
-				for (int i = 0; i < row; ++i)
-				{
-					System.out.println(Arrays.toString(checkboardArray[i]));					// need to make print
-				}
-				System.out.println("--------------------------------------------------------"); // delete later
-			// Diagonal Array ---------------------------------------------------------------
-				
-				int[][] diagonalArray = createDiagonalStripes(row, col, stripeWidth);
-				for (int i = 0; i < row; ++i)
-				{
-					System.out.println(Arrays.toString(diagonalArray[i]));					// need to make print
-				}
+		// CONSTRUCT IMAGES ------------------------------------------------------------------------
+			saveImage("vertical-stripes.pgm"	, createVerticalStripes(row, col, stripeWidth));
+			saveImage("horizontal-stripes.pgm"	, createHorizontalStripes(row, col, stripeWidth));
+			saveImage("checkerboard.pgm"		, createCheckerboard(row, col, squareWidth));
+			saveImage("diagonal-stripes.pgm"	, createDiagonalStripes(row, col, stripeWidth));
 	}
 	
-	// ----------------------------------^ MAIN METHOD ABOVE ^-------------------------------------
-	
-	
-	// SAVE IMAGE METHOD --------------------------------------------------------------------------
+	// SAVE IMAGE METHOD ---------------------------------------------------------------------------
 		public static void saveImage(String filename, int[][] image) throws IOException, FileNotFoundException
 		{
 			PrintWriter writer = new PrintWriter(new File(filename));
@@ -71,23 +36,17 @@ public class Project_10
 				writer.println(color);									// 255
 	
 				// Create the Actual Image
-				for (int row = 0; row < image.length; ++row)
+				for (int i = 0; i < image.length; ++i)
 				{
-					for (int col = 0; col < image[0].length; ++col)
-					{
-						image[row][col] = color;
-					}				
-					
-					// writer.println(image); 		// this is what prints the full array (height width)
-					writer.println(color + " " + color); 			// Make shift way to get only values
-				}
-						
+					writer.println(Arrays.toString(image[i]));					// need to make print
+				}			
+
 			// Close the File ---------------------------------------------------------------------
 				writer.flush();
 				writer.close();
 		}
 		
-	// VERTICAL STRIPE METHOD ---------------------------------------------------------------------
+	// VERTICAL STRIPE METHOD ----------------------------------------------------------------------
 		public static int[][] createVerticalStripes(int height, int width, int stripeWidth)
 		{
 			final int white = 0; // 255 <- grayscale
@@ -121,7 +80,7 @@ public class Project_10
 		return array;	
 		}
 	
-	// HORIZONAL STRIPE METHOD --------------------------------------------------------------------
+	// HORIZONAL STRIPE METHOD ---------------------------------------------------------------------
 		public static int[][] createHorizontalStripes(int height, int width, int stripeWidth)
 		{
 			final int white 	= 0; // 255 <- grayscale
@@ -151,7 +110,7 @@ public class Project_10
 			return array;
 		}
 	
-	// CHECKBOARD METHOD --------------------------------------------------------------------------
+	// CHECKBOARD METHOD ---------------------------------------------------------------------------
 		public static int[][] createCheckerboard(int height, int width, int squareWidth)
 		{
 				final int white 	= 0; // 255 <- grayscale
@@ -209,7 +168,7 @@ public class Project_10
 			return array;
 		}
 		
-	// CREATE DIAGONAL METHOD --------------------------------------------------------------------------
+	// CREATE DIAGONAL METHOD ----------------------------------------------------------------------
 		
 	// DIAGONAL METHOD ----------------------------------------------------------------------------
 		public static int[][] createDiagonalStripes(int height, int width, int stripeWidth)

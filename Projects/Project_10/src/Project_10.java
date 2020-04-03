@@ -20,7 +20,8 @@ public class Project_10
 			saveImage("vertical-stripes.pgm"	, createVerticalStripes(row, col, stripeWidth));
 			saveImage("horizontal-stripes.pgm"	, createHorizontalStripes(row, col, stripeWidth));
 			saveImage("checkerboard.pgm"		, createCheckerboard(row, col, squareWidth));
-			saveImage("diagonal-stripes.pgm"	, createDiagonalStripes(row, col, stripeWidth));
+			saveImage("diagonal-stripes.pgm"	, createDiagonalStripes(row, col, stripeWidth));		
+			
 	}
 	
 	// SAVE IMAGE METHOD ---------------------------------------------------------------------------
@@ -115,14 +116,14 @@ public class Project_10
 		{
 				final int white 	= 0; // 255 <- grayscale
 				final int black 	= 255;
-				int color = white;
+				int color = black;
 							
 				int[][] array = new int[height][width];
 				
 				// Create the Actual array
 				for (int row = 0; row < array.length; ++row)
 				{
-					// OUTER LOOP --------------------------------------------
+					// OUTER LOOP --------------------------------------------					
 						if (row % squareWidth == 0)
 						{
 							if (color == white)
@@ -137,6 +138,17 @@ public class Project_10
 					// INNER LOOP --------------------------------------------
 						for (int col = 0; col < array[0].length; ++col)
 						{						
+							if (col == 0)
+							{
+								if (color == white)
+								{
+									color = black;
+								}
+								else
+								{
+									color = white;
+								}
+							}
 							if (col % squareWidth == 0)
 							{
 								if (color == white)
@@ -148,28 +160,15 @@ public class Project_10
 									color = white;
 								}
 							}
-							
-							if (col == (width - 1))
-							{
-								if (color == white)
-								{
-									color = black;
-								}
-								else
-								{
-									color = white;
-								}
-							}
-							
+														
 							array[row][col] = color;
 
 						}
+				
 				}
 			return array;
 		}
-		
-	// CREATE DIAGONAL METHOD ----------------------------------------------------------------------
-		
+				
 	// DIAGONAL METHOD ----------------------------------------------------------------------------
 		public static int[][] createDiagonalStripes(int height, int width, int stripeWidth)
 		{
@@ -188,15 +187,16 @@ public class Project_10
 					{						
 						if ((col + row) % (stripeWidth*2) < stripeWidth)
 						{
-							array[row][col] = black;
+							array[row][col] = white;
 							
 						}
 						else 
 						{
-							array[row][col] = white;
+							array[row][col] = black;
 						}
 					}
 					
+				
 				}
 			return array;
 		}

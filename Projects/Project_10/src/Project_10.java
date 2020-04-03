@@ -11,10 +11,10 @@ public class Project_10
 	{
 		// Construct Image Array --------------------------------------------------------------
 			String filename = "image.txt";
-			int row 		= 6;
-			int col 		= 6;
-			int stripeWidth = 2;
-			int squareWidth = 2;
+			int row 		= 250;
+			int col 		= 250;
+			int stripeWidth = 10;
+			int squareWidth = 10;
 			
 			int[][] image 	= new int[row][col];
 			
@@ -132,24 +132,20 @@ public class Project_10
 			
 			// Create the Actual array
 			for (int row = 0; row < array.length; ++row)
-			{
-				if (row % stripeWidth == 0)
+			{	
+				if (row % (stripeWidth * 2) >= stripeWidth)
 				{
-					if (color == white)
-					{
-						color = black;
-					}
-					else
-					{
-						color = white;
-					}
+					color = black;
+				}
+				else
+				{
+					color = white;
 				}
 				
 				for (int col = 0; col < array[0].length; ++col)
 				{
 					array[row][col] = color;
 				}
-				System.out.println(Arrays.toString(array[row]));
 			}
 			
 			return array;

@@ -13,7 +13,7 @@ public class Project_10
 			String filename = "image.txt";
 			int row 		= 6;
 			int col 		= 6;
-			int stripeWidth = 1;
+			int stripeWidth = 2;
 			int squareWidth = 2;
 			
 			int[][] image 	= new int[row][col];
@@ -44,6 +44,14 @@ public class Project_10
 				for (int i = 0; i < row; ++i)
 				{
 					System.out.println(Arrays.toString(checkboardArray[i]));					// need to make print
+				}
+				System.out.println("--------------------------------------------------------"); // delete later
+			// Diagonal Array ---------------------------------------------------------------
+				
+				int[][] diagonalArray = createDiagonalStripes(row, col, stripeWidth);
+				for (int i = 0; i < row; ++i)
+				{
+					System.out.println(Arrays.toString(diagonalArray[i]));					// need to make print
 				}
 	}
 	
@@ -206,5 +214,33 @@ public class Project_10
 		}
 		
 	// DIAGONAL METHOD ----------------------------------------------------------------------------
-
+		public static int[][] createDiagonalStripes(int height, int width, int stripeWidth)
+		{
+			
+			// METHOD BELOW ----------------------------------------------			
+				final int white 	= 0; // 255 <- grayscale
+				final int black 	= 255;
+							
+				int[][] array = new int[height][width];
+				
+				// OUTER LOOP
+				for (int row = 0; row < array.length; ++row)
+				{
+					// INNER LOOP
+					for (int col = 0; col < array[0].length; ++col)
+					{						
+						if ((col + row) % (stripeWidth*2) < stripeWidth)
+						{
+							array[row][col] = black;
+							
+						}
+						else 
+						{
+							array[row][col] = white;
+						}
+					}
+					
+				}
+			return array;
+		}
 }

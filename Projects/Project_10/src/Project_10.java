@@ -47,10 +47,10 @@ public class Project_10
 				}
 	}
 	
-	// ----------------------------------^ MAIN METHOD ABOVE ^----------------------------------
+	// ----------------------------------^ MAIN METHOD ABOVE ^-------------------------------------
 	
 	
-	// SAVE IMAGE METHOD -----------------------------------------------------------------------
+	// SAVE IMAGE METHOD --------------------------------------------------------------------------
 		public static void saveImage(String filename, int[][] image) throws IOException, FileNotFoundException
 		{
 			PrintWriter writer = new PrintWriter(new File(filename));
@@ -113,7 +113,7 @@ public class Project_10
 		return array;	
 		}
 	
-	// HORIZONAL STRIPE METHOD ---------------------------------------------------------------------
+	// HORIZONAL STRIPE METHOD --------------------------------------------------------------------
 		public static int[][] createHorizontalStripes(int height, int width, int stripeWidth)
 		{
 			final int white 	= 0; // 255 <- grayscale
@@ -147,7 +147,7 @@ public class Project_10
 			return array;
 		}
 	
-	// CHECKBOARD METHOD ---------------------------------------------------------------------
+	// CHECKBOARD METHOD --------------------------------------------------------------------------
 		public static int[][] createCheckerboard(int height, int width, int squareWidth)
 		{
 				final int white 	= 0; // 255 <- grayscale
@@ -205,6 +205,6 @@ public class Project_10
 			return array;
 		}
 		
-	// DIAGONAL METHOD ---------------------------------------------------------------------
+	// DIAGONAL METHOD ----------------------------------------------------------------------------
 
 }

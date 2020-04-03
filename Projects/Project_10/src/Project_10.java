@@ -209,6 +209,8 @@ public class Project_10
 			return array;
 		}
 		
+	// CREATE DIAGONAL METHOD --------------------------------------------------------------------------
+		
 	// DIAGONAL METHOD ----------------------------------------------------------------------------
 		public static int[][] createDiagonalStripes(int height, int width, int stripeWidth)
 		{

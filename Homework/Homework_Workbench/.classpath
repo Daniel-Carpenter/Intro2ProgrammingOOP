@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-13">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="Users/dbry1/OneDrive - University of Oklahoma/1. School/1. University of Oklahoma/4. Senior/SPRING 2020/1. C S-1324-010/Homework"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

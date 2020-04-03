@@ -11,7 +11,7 @@ public class createDiagonalStripes_Example
 		// METHOD BELOW ----------------------------------------------			
 			final int white 	= 0; // 255 <- grayscale
 			final int black 	= 255;
-			int color = black;
+			int color = white;
 						
 			int[][] array = new int[height][width];
 			

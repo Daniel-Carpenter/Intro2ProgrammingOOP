@@ -6,9 +6,9 @@ import java.awt.geom.*;
 public class Project_11 extends JPanel
 {
 	// STATIC CONSTANTS ----------------------------------------------------------------------------------------------------
-		private static final int WIDTH = 640;
-		private static final int HEIGHT = 480;
-		private static final String WINDOW_TITLE = "My Image Title!";
+		private static final int WIDTH = 1280;
+		private static final int HEIGHT = 720;
+		private static final String WINDOW_TITLE = "Project 11: Image Output for Java Art";
 	
 		
 	// MAIN METHOD  --------------------------------------------------------------------------------------------------------

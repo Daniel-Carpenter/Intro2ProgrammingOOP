@@ -15,6 +15,7 @@ public class Project_11 extends JPanel
 			Color backgroundCol = new Color(0, 0, 0);
 			Color pacManCol		= new Color(255,238,0);
 			Color ghostCol 		= new Color(253, 0, 0);
+			Color ghostEye		= new Color(0, 105, 183);
 			Color dotCol		= new Color(255, 184, 151);
 			Color lineCol		= new Color(25, 25, 166);
 	
@@ -86,14 +87,39 @@ public class Project_11 extends JPanel
 				// DEFINE INPUTS
 					double g_x 		= WIDTH / 2 + WIDTH / 5; 
 	                double g_w 		= 150;
-	                double g_arcw	= 100;
-	                double g_arch	= 100;
+	                double g_arcw	= 150;
+	                double g_arch	= 150;
 	                
 				// DRAW GHOST
 	                RoundRectangle2D.Double ghost = new RoundRectangle2D.Double(g_x, y, g_w, h, g_arcw, g_arch);
 					g2d.setPaint(ghostCol);
 					g2d.draw(ghost);
 					g2d.fill(ghost);
+					
+			// CREATE GHOST WHITE EYES --------------------------------------------------------------------------------------
+				// DRAW LEFT WHITE EYE
+	                RoundRectangle2D.Double leftWhite = new RoundRectangle2D.Double(g_x + 5, y * 1.5, g_w / 2.5, h / 2.7, g_arcw + 50, g_arch + 50);
+					g2d.setPaint(Color.WHITE);
+					g2d.draw(leftWhite);
+					g2d.fill(leftWhite);
+	                
+				// DRAW RIGHT WHITE EYE
+					RoundRectangle2D.Double rightWhite = new RoundRectangle2D.Double(g_x + 70 , y * 1.5, g_w / 2.5, h / 2.7, g_arcw + 50, g_arch + 50);
+					g2d.setPaint(Color.WHITE);
+					g2d.draw(rightWhite);
+					g2d.fill(rightWhite);
+					
+				// DRAW LEFT BLUE EYE
+	                RoundRectangle2D.Double leftBlue = new RoundRectangle2D.Double(g_x + 7, y * 1.84, g_w / 4.5, g_w / 4.5, g_arcw + 300, g_arch + 300);
+					g2d.setPaint(ghostEye);
+					g2d.draw(leftBlue);
+					g2d.fill(leftBlue);
+					
+				// DRAW RIGHT BLUE EYE
+	                RoundRectangle2D.Double rightBlue = new RoundRectangle2D.Double(g_x + 72, y * 1.84, g_w / 4.5, g_w / 4.5, g_arcw + 300, g_arch + 300);
+					g2d.setPaint(ghostEye);
+					g2d.draw(rightBlue);
+					g2d.fill(rightBlue);
 					
 			// CREATE DOT -------------------------------------------------------------------------------------------------
 				// DEFINE INPUTS

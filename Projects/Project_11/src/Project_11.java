@@ -42,17 +42,18 @@ public class Project_11 extends JPanel
 				super.paintComponent(g);
 				Graphics2D g2d = (Graphics2D) g;
 				
-			// HORIZONTAL LINE
-				Line2D.Double line = new Line2D.Double(0, HEIGHT/2, WIDTH, HEIGHT/2);
-				g2d.setColor(purple);
-				g2d.draw(line);
-			
-			// VERTICAL LINE
-				line.setLine(WIDTH/2, 0, WIDTH/2, HEIGHT);
-				g2d.setColor(green);
-				g2d.draw(line);
+			// CREATE 2-LINES ----------------------------------------------------------------------------------------------
+				// HORIZONTAL LINE
+					Line2D.Double line = new Line2D.Double(0, HEIGHT/2, WIDTH, HEIGHT/2);
+					g2d.setColor(Color.BLUE);
+					g2d.draw(line);
 				
-			// CREATE ARC
+				// VERTICAL LINE
+					line.setLine(WIDTH/2, 0, WIDTH/2, HEIGHT);
+					g2d.setColor(Color.RED);
+					g2d.draw(line);
+				
+			// CREATE PAC MAN ----------------------------------------------------------------------------------------------
 				// DEFINE INPUTS
 					double x 		= WIDTH / 20;
 					double y 		= HEIGHT / 4.5;
@@ -68,11 +69,14 @@ public class Project_11 extends JPanel
 	                        BasicStroke.JOIN_MITER,
 	                        10.0f, dash1, 0.0f);
 					
-				// CREATE PAC MAN
+				// DRAW PAC MAN
 					Arc2D.Double arc = new Arc2D.Double(x, y, w, h, angSt, angExt, closure);
 					g2d.setPaint(pacMan);
 					g2d.setStroke(dashed);
 					g2d.draw(arc);
 					g2d.fill (arc);
+					
+			// CREATE GHOST -------------------------------------------------------------------------------------------------
+
 		}
 }

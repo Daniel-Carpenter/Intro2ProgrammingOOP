@@ -27,19 +27,19 @@ public class Project_11 extends JPanel
 	
 	// CREATE PICTURE  -----------------------------------------------------------------------------------------------------	
 		public void paintComponent(Graphics g)
-	{
-		// Do not change these two lines.
-		super.paintComponent(g);
-		Graphics2D g2d = (Graphics2D) g;
-		
-		// Draw a horizontal, blue line in the middle of the screen.
-		Line2D.Double line = new Line2D.Double(0, HEIGHT/2, WIDTH, HEIGHT/2);
-		g2d.setColor(Color.BLACK);
-		g2d.draw(line);
-		
-		// VERTICAL
-		line.setLine(WIDTH/2, 0, WIDTH/2, HEIGHT);
-		g2d.setColor(Color.ORANGE);
-		g2d.draw(line);
-	}
+		{
+			// Do not change these two lines.
+			super.paintComponent(g);
+			Graphics2D g2d = (Graphics2D) g;
+			
+			// Draw a horizontal, blue line in the middle of the screen.
+			Line2D.Double line = new Line2D.Double(0, HEIGHT/2, WIDTH, HEIGHT/2);
+			g2d.setColor(Color.BLACK);
+			g2d.draw(line);
+			
+			// VERTICAL
+			line.setLine(WIDTH/2, 0, WIDTH/2, HEIGHT);
+			g2d.setColor(Color.ORANGE);
+			g2d.draw(line);
+		}
 }

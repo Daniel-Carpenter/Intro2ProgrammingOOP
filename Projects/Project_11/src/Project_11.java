@@ -63,16 +63,9 @@ public class Project_11 extends JPanel
 					double angExt	= 305;
 					int  closure	= Arc2D.PIE;
 					
-					final float dash1[] = {10.0f};
-					BasicStroke dashed = new BasicStroke(1.0f,
-	                        BasicStroke.CAP_BUTT,
-	                        BasicStroke.JOIN_MITER,
-	                        10.0f, dash1, 0.0f);
-					
 				// DRAW PAC MAN
 					Arc2D.Double arc = new Arc2D.Double(x, y, w, h, angSt, angExt, closure);
 					g2d.setPaint(pacMan);
-					g2d.setStroke(dashed);
 					g2d.draw(arc);
 					g2d.fill (arc);
 					

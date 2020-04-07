@@ -1,18 +1,20 @@
-// Daniel Carpenter
+// James Dizikes
+// CS 1324 Fall 2019
 import javax.swing.*;
 import java.awt.*;
 import java.awt.geom.*;
 
-public class Project_11 extends JPanel
+public class JavaArt extends JPanel
 {
 	// Change these constants to adjust the size and title of the window.
 	private static final int WIDTH = 640;
 	private static final int HEIGHT = 480;
 	private static final String WINDOW_TITLE = "My Image Title!";
 	
+	// Do not change the main method.
 	public static void main(String[] args)
 	{
-		JPanel panel = new Project_11();
+		JPanel panel = new JavaArt();
 		panel.setPreferredSize(new Dimension(WIDTH, HEIGHT));
 		
 		JFrame frame = new JFrame(WINDOW_TITLE);
@@ -21,7 +23,6 @@ public class Project_11 extends JPanel
 		frame.add(panel);
 		frame.pack();
 	}
-	
 	
 	// Add your drawing code to this method.
 	public void paintComponent(Graphics g)

@@ -85,38 +85,53 @@ public class Project_11 extends JPanel
 					
 			// CREATE GHOST -------------------------------------------------------------------------------------------------
 				// DEFINE INPUTS
-					double g_x 		= WIDTH / 2 + WIDTH / 5; 
-	                double g_w 		= 150;
+					double g_x 		= WIDTH / 2 + WIDTH / 5 - 20;
+					double g_y		= HEIGHT / 4.5;
+	                double g_w 		= 175;
+	                double g_h		= 400;
 	                double g_arcw	= 150;
-	                double g_arch	= 150;
+	                double g_arch	= 100;
+	                double g_angSt 	= 0; 
+	                double g_angExt = 180;
+	                int g_closure = Arc2D.OPEN;
 	                
 				// DRAW GHOST
-	                RoundRectangle2D.Double ghost = new RoundRectangle2D.Double(g_x, y, g_w, h, g_arcw, g_arch);
+	                Arc2D.Double ghost = new Arc2D.Double(g_x, g_y, g_w, g_h, g_angSt, g_angExt, g_closure);
 					g2d.setPaint(ghostCol);
 					g2d.draw(ghost);
 					g2d.fill(ghost);
 					
+					RoundRectangle2D.Double ghost2 = new RoundRectangle2D.Double(g_x + 0 / 2, g_y, g_w, g_h - 100, 200, 200);
+					g2d.setPaint(ghostCol);
+					g2d.draw(ghost2);
+					g2d.fill(ghost2);
+					
+	                RoundRectangle2D.Double backgroundGhost = new RoundRectangle2D.Double(b_x, HEIGHT * .79, b_w, b_h, b_arcw, b_arch);
+	                g2d.setPaint(backgroundCol);
+	                g2d.draw(backgroundGhost);
+	                g2d.fill(backgroundGhost);
+					
 			// CREATE GHOST WHITE EYES --------------------------------------------------------------------------------------
 				// DRAW LEFT WHITE EYE
-	                RoundRectangle2D.Double leftWhite = new RoundRectangle2D.Double(g_x + 5, y * 1.5, g_w / 2.5, h / 2.7, g_arcw + 50, g_arch + 50);
+	                RoundRectangle2D.Double leftWhite = new RoundRectangle2D.Double(g_x + 5, y * 1.5, 150 / 2.5, h / 2.7, g_arcw + 50, g_arch + 50);
 					g2d.setPaint(Color.WHITE);
 					g2d.draw(leftWhite);
 					g2d.fill(leftWhite);
 	                
 				// DRAW RIGHT WHITE EYE
-					RoundRectangle2D.Double rightWhite = new RoundRectangle2D.Double(g_x + 70 , y * 1.5, g_w / 2.5, h / 2.7, g_arcw + 50, g_arch + 50);
+					RoundRectangle2D.Double rightWhite = new RoundRectangle2D.Double(g_x + 78 , y * 1.5, 150 / 2.5, h / 2.7, g_arcw + 50, g_arch + 50);
 					g2d.setPaint(Color.WHITE);
 					g2d.draw(rightWhite);
 					g2d.fill(rightWhite);
 					
 				// DRAW LEFT BLUE EYE
-	                RoundRectangle2D.Double leftBlue = new RoundRectangle2D.Double(g_x + 7, y * 1.84, g_w / 4.5, g_w / 4.5, g_arcw + 300, g_arch + 300);
+	                RoundRectangle2D.Double leftBlue = new RoundRectangle2D.Double(g_x + 7, y * 1.84, 150 / 4.5, 150 / 4.5, g_arcw + 300, g_arch + 300);
 					g2d.setPaint(ghostEye);
 					g2d.draw(leftBlue);
 					g2d.fill(leftBlue);
 					
 				// DRAW RIGHT BLUE EYE
-	                RoundRectangle2D.Double rightBlue = new RoundRectangle2D.Double(g_x + 72, y * 1.84, g_w / 4.5, g_w / 4.5, g_arcw + 300, g_arch + 300);
+	                RoundRectangle2D.Double rightBlue = new RoundRectangle2D.Double(g_x + 80, y * 1.84, 150 / 4.5, 150 / 4.5, g_arcw + 300, g_arch + 300);
 					g2d.setPaint(ghostEye);
 					g2d.draw(rightBlue);
 					g2d.fill(rightBlue);
@@ -125,8 +140,8 @@ public class Project_11 extends JPanel
 				// DEFINE INPUTS
 					double d_x 		= WIDTH / 2 - 15;
 					double d_y		= HEIGHT / 2 - 35;
-		            double d_w 		= 50;
-		            double d_h		= 50;
+		            double d_w 		= 40;
+		            double d_h		= 40;
 		                
 		    // DRAW DOT
 		            Rectangle2D.Double dot1 = new Rectangle2D.Double(d_x - 50, d_y, d_w, d_h);

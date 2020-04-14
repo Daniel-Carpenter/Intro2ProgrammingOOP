@@ -5,13 +5,15 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Scanner;
 import java.util.ArrayList;
 
 public class Project_12 
 {
 	public static void main(String[] args)
-			throws FileNotFoundException, IOException {
+			throws FileNotFoundException, IOException 
+	{
 
 			final String FILENAME_COMMON = "common-dictionary.txt";
 			final String FILENAME_PERSONAL = "personal-dictionary.txt";
@@ -19,7 +21,7 @@ public class Project_12
 			
 			// Read in Common and Personal Dictionary
 				ArrayList<String> common = readFile(FILENAME_COMMON);
-				ArrayList<String> sizePersonal = readFile(FILENAME_PERSONAL);
+				ArrayList<String> personal = readFile(FILENAME_PERSONAL);
 			
 			// Construct a Scanner to read user input from the keyboard.
 			Scanner keyboard = new Scanner(System.in);
@@ -35,34 +37,37 @@ public class Project_12
 			while (!word.equals("quit")) {
 				
 				// Check if the word is in either dictionary.
-//				if (checkSpelling(word, common, personal, sizePersonal)) {
-//					System.out.println("The word is spelled correctly.");
-//				} 
-//				else {
-//					System.out.println("The word was not found in the "
-//						+ "dictionary.");			
-//					System.out.println("Would you like to add it to your personal "
-//						+ "dictionary (yes/no)?");
-//					String response = keyboard.nextLine().toLowerCase();
+				if (checkSpelling(word, common, personal)) 
+				{
+					System.out.println("The word is spelled correctly.");
+				} 
+				
+				// If word not Found:
+				else 
+				{
+					System.out.println("The word was not found in the "
+						+ "dictionary.");			
+					System.out.println("Would you like to add it to your personal "
+						+ "dictionary (yes/no)?");
+					String response = keyboard.nextLine().toLowerCase();
 					
-					// If the user responds "yes" and there is room in the oversize
-					// array, add the word to the end of the array and sort it.
-//					if (response.equals("yes") && sizePersonal < personal.length) {
-//						personal[sizePersonal] = word;
-//						sizePersonal += 1;
-//						Arrays.sort(personal, 0, sizePersonal);
+					// Add Word to Personal Dictionary if Yes
+					if (response.equals("yes")) 
+					{
+						personal.add(word);
+						Collections.sort(personal);
 					}
-//				}
-//				
-//				// Get the next word from the user.
-//				System.out.println();
-//				System.out.print(prompt);
-//				word = keyboard.nextLine().toLowerCase();
-//			}
-//			
-//			keyboard.close();
+				}
+								
+				// Get the next word from the user.
+				System.out.println();
+				System.out.print(prompt);
+				word = keyboard.nextLine().toLowerCase();
+			}
+			
+			keyboard.close();
 //			writeFile(FILENAME_PERSONAL, personal, sizePersonal);
-//			System.out.println("Goodbye!");
+			System.out.println("Goodbye!");
 		}
 		
 		// READ FILE -----------------------------------------------
@@ -78,25 +83,20 @@ public class Project_12
 			
 			return commonDictionary;
 		}
-		
-		
-		// Return true if word is in either array; otherwise, return false. Note 
-		// that the arrays are sorted, so binary search can be used.
-		public static boolean checkSpelling(String word, String[] common, 
-			String[] personal, int sizePersonal) {
-				
-			if (Arrays.binarySearch(common, word) >= 0) {
-				return true;
-			}
-			
-			if (Arrays.binarySearch(personal, 0, sizePersonal, word) >= 0) {
+
+		public static boolean checkSpelling(String word, 
+											ArrayList<String> common, 
+											ArrayList<String> personal) 
+		{	
+			Collections.sort(personal);
+			if (common.contains(word) || personal.contains(word)) 
+			{
 				return true;
 			}
 			
 			return false;
 		}
 		
-		// Write the nonempty elements of an oversize array to a given file.
 		public static void writeFile(String filename, String[] array, int size)
 				throws FileNotFoundException {
 

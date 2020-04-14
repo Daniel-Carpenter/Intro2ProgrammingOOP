@@ -4,7 +4,6 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.Scanner;
 import java.util.ArrayList;
@@ -66,7 +65,7 @@ public class Project_12
 			}
 			
 			keyboard.close();
-//			writeFile(FILENAME_PERSONAL, personal, sizePersonal);
+			writeFile(FILENAME_PERSONAL, personal);
 			System.out.println("Goodbye!");
 		}
 		
@@ -80,6 +79,7 @@ public class Project_12
 			{
 				commonDictionary.add(input.nextLine());
 			}
+			input.close();
 			
 			return commonDictionary;
 		}
@@ -97,13 +97,14 @@ public class Project_12
 			return false;
 		}
 		
-		public static void writeFile(String filename, String[] array, int size)
-				throws FileNotFoundException {
+		public static void writeFile(String fileName, ArrayList<String> list)
+				throws FileNotFoundException 
+		{
+			PrintWriter writer = new PrintWriter(fileName);
 
-			PrintWriter writer = new PrintWriter(filename);
-
-			for (int idx = 0; idx < size; ++idx) {
-				writer.println(array[idx]);
+			for (int idx = 0; idx < list.size(); ++idx) 
+			{
+				writer.println(list.get(idx));
 			}
 
 			// Close the file; otherwise, the contents will be lost.

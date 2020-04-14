@@ -4,8 +4,9 @@
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="true"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="g"/>
+		<item key="selection" value="CAPACITY_PERSONAL_DICT"/>
 		<list key="findhistory">
+			<item value="CAPACITY_PERSONAL_DICT"/>
 			<item value="g"/>
 			<item value="row"/>
 			<item value="image"/>
@@ -13,7 +14,6 @@
 			<item value="check"/>
 			<item value="read"/>
 			<item value="newWord"/>
-			<item value="WORD"/>
 		</list>
 		<list key="replacehistory">
 			<item value="b"/>
@@ -25,5 +25,9 @@
 			<item value="dictionary"/>
 			<item value="words"/>
 		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="651"/>
+		<item key="DIALOG_Y_ORIGIN" value="370"/>
 	</section>
 </section>

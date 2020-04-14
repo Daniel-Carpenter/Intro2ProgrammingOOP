@@ -36,6 +36,7 @@ overviewRuler_migration=migrated_3.1
 partialcoverage_color=95,95,0
 printMarginColor=101,101,101
 pydevOccurrenceIndicationColor=65,65,4
+quickdiff.quickDiff=false
 searchResultHighlighting=false
 searchResultIndication=true
 searchResultIndicationColor=70,68,103

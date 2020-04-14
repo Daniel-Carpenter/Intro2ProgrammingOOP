@@ -15,15 +15,11 @@ public class Project_12
 
 			final String FILENAME_COMMON = "common-dictionary.txt";
 			final String FILENAME_PERSONAL = "personal-dictionary.txt";
-			final int CAPACITY_PERSONAL_DICT = 100;
 			String prompt = "Enter a word or 'quit' to stop: ";
 			
-			// Read the common dictionary and store the words in an array.
-			ArrayList<String> common = readFile(FILENAME_COMMON);
-			
-			// Read the personal dictionary, creating the file if it doesn't 
-			// exist. Store the words in an oversize array.
-			//sizePersonal = readFileOversize(FILENAME_PERSONAL, personal);
+			// Read in Common and Personal Dictionary
+				ArrayList<String> common = readFile(FILENAME_COMMON);
+				ArrayList<String> sizePersonal = readFile(FILENAME_PERSONAL);
 			
 			// Construct a Scanner to read user input from the keyboard.
 			Scanner keyboard = new Scanner(System.in);

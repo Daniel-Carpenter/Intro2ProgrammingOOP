@@ -1,9 +1,12 @@
+PEFontSize=11
 applyBackground=false
 approved.defs.file.last.changed.time=1585005899000
 configurationInstallLocation=/C\:/Users/dbry1/OneDrive/Documents/Programs/Eclipse/
 eclipse.preferences.version=1
-iconcolormode=primary
-last.download.attempt.time=1587329426994
-lastConfiguration=1579626637115
+iconcolormode=pastel
+includeThemingInOomph=false
+last.download.attempt.time=1587744747149
+lastConfiguration=1587744723014
 newinstall=true
+overridePEFontSize=false
 workbench.theme=Dark Gray

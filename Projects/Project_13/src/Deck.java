@@ -13,17 +13,13 @@ import java.util.Collections;
 
 public class Deck
 {
-	/** These constants set up the characteristics of the Deck of cards.
-	 *
-	 */
+	private final Card[] cards;
+	private int top;
 
-	/** Construct a new Deck of cards that has the same cards as the argument deck.
-	 *
-	 * @param deck A legal Deck of cards.
-	 */
 	public Deck (Deck deck)
 	{
-
+		cards = new Card[Card.getSuits().length * (Card.getMaxRank() - Card.getMinRank() + 1)];
+		refresh();
 	}
 
 	/** Construct a new deck of shuffled cards.

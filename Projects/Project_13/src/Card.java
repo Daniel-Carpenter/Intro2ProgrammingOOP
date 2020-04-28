@@ -6,11 +6,29 @@ public class Card
 	// MAIN -------------------------------------------------------------------
 	public static void main(String[] args)
 	{
-		Card card;
+		Card myCard;
+		Card otherCard;
 		
 		// GET CARD OUTPUT
-		card = new Card(10, Suit.Diamonds);
-		System.out.println(card.getRank() + " of " + card.getSuit().toString());		 
+		myCard = new Card(10, Suit.Diamonds);
+		System.out.println(myCard.getRank() + " of " + myCard.getSuit().toString());
+		
+		otherCard = new Card(10, Suit.Diamonds);
+
+		//COMPARE CARDS
+
+		if (myCard.compareTo(myCard, otherCard) > 0)
+		{
+			System.out.println("My card won");
+		}
+		else if (myCard.compareTo(myCard, otherCard) == 0)
+		{
+			System.out.println("Start War");
+		}
+		else
+		{			
+			System.out.println("Your card won");
+		}
 	}
 	
 	// SETUP
@@ -69,19 +87,20 @@ public class Card
                 getSuit().name());	
 	}
 	
-	public boolean compareTo(Object otherCard)
+	public int compareTo(Card card, Card otherCard)
 	{
-		if (!(otherCard instanceof Card))
+		if (card.getRank() - otherCard.getRank() > 0)
 		{
-			return false;
+			return 1;
 		}
-		if (otherCard == this)
+		else if (card.getRank() - otherCard.getRank() == 0)
 		{
-			return true;
+			return 0;
 		}  
-		Card that = (Card)otherCard;
-		
-		return that.getRank() == getRank() && that.getSuit() == getSuit();
+		else
+		{
+			return -1;
+		}
 	}
 	
 	public static int getMinRank()

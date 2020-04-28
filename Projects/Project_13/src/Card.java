@@ -3,10 +3,20 @@ import java.util.Objects;
 
 public class Card 
 {
+	// MAIN -------------------------------------------------------------------
+	public static void main(String[] args)
+	{
+		Card card;
+		
+		// GET CARD OUTPUT
+		card = new Card(10, Suit.Diamonds);
+		System.out.println(card.getRank() + " of " + card.getSuit().toString());		 
+	}
+	
 	// SETUP
 	public enum Suit 
 	{
-		DIAMONDS, HEARTS, CLUBS, SPADES;
+		Diamonds, Hearts, Clubs, Spades;
 	}
 	
 	private static final int MIN_RANK = 1;
@@ -16,7 +26,7 @@ public class Card
 	private Suit suit;
 	
 	// CALL METHODS - SET RANK AND SUIT ---------------------------------------
-	public Card(int rank, String suit)
+	public Card(int rank, Suit suit)
 	{
 		setRank(rank);
 		setSuit(suit);
@@ -51,4 +61,41 @@ public class Card
 	}
 	
 	// toString ---------------------------------------------------------------
+	public String toString()
+	{
+		return String.format("%s[rank=%d, suit=%s]",
+                getClass().getSimpleName(),
+                getRank(),
+                getSuit().name());	
+	}
+	
+	public boolean compareTo(Object otherCard)
+	{
+		if (!(otherCard instanceof Card))
+		{
+			return false;
+		}
+		if (otherCard == this)
+		{
+			return true;
+		}  
+		Card that = (Card)otherCard;
+		
+		return that.getRank() == getRank() && that.getSuit() == getSuit();
+	}
+	
+	public static int getMinRank()
+	{
+		return MIN_RANK;
+	}
+
+	public static int getMaxRank()
+	{
+		return MAX_RANK;
+	}
+
+	public static Suit[] getSuits()
+	{
+		return Suit.values();
+	}
 }

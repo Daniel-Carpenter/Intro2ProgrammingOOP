@@ -9,50 +9,37 @@ public class Budget
 {	
 	
 	// PRIVATE CLASS FUNCTIONS ---------------------------------------------------------
-	private static int ID;
-	private static double balance = 0;
+	private int ID;
+	private double balance = 0;
 	private static ArrayList<Double> history = new ArrayList<Double>();
 
 	
 	// PUBLIC CLASS FUNCTIONS ---------------------------------------------------------
-	public Budget(String name, double balanceAmt, double updateAmt)
+	public Budget(int ID, double balanceAmt)
 	{
-		this.ID = getID();
-		Budget.addBalance(balanceAmt);
-		Budget.updateBalance(updateAmt);
+		this.ID = ID;
+		this.balance = balanceAmt;
+		this.history = history;
+		this.history.add(balance);
+	}
+	public int getID()
+	{
+		return this.ID;
 	}
 	
-	public static void addID(int newID)
-	{
-		ID = newID;
-	}
-	
-	public static int getID()
-	{
-		return ID;
-	}
-	
-	public static void addBalance(double initialBalance)
-	{
-		Budget.addToHistory(balance);
-
-		balance += initialBalance;		
-		Budget.addToHistory(initialBalance);
-	}
-	
-	public static double getBalance()
+	public double getBalance()
 	{
 		return balance;
 	}
 	
-	public static double updateBalance(double amtAdded)
+	public double updateBalance(double amtAdded)
 	{
 		balance += amtAdded;
 		Budget.addToHistory(amtAdded);
 		return balance;
 	}
 	
-	public static ArrayList<Double> getTransactionHistory()
+	public ArrayList<Double> getTransactionHistory()
 	{
 		return history;
 	}

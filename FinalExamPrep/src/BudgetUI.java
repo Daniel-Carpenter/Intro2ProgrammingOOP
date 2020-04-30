@@ -6,13 +6,9 @@ public class BudgetUI
 	{
 		Scanner userInput = new Scanner(System.in);
 		
-		System.out.println("Please create ID: (ex. '1234')");
-		Budget.addID(userInput.nextInt());
+		Budget daniel = new Budget(9743, 1000);
 		
-		System.out.println("Please Add Initial Balance: ");
-		Budget.addBalance(userInput.nextDouble());
-		
-		System.out.println("Current Balance: " + Budget.getBalance());
+		System.out.println("Current Balance: " + daniel.getBalance());
 				
 		System.out.println("Would you like to add or withdraw funds? (1/0)");
 			if (userInput.nextInt() == 1)
@@ -20,20 +16,20 @@ public class BudgetUI
 				System.out.println();
 				System.out.println("-------------------------------------");
 				System.out.println("Please enter funds amount: (indicate withdrawal with a negative (-) sign)");
-				Budget.updateBalance(userInput.nextDouble());
+				daniel.updateBalance(userInput.nextDouble());
 				
 				System.out.println();
-				System.out.println("New Balance: " + Budget.getBalance());
+				System.out.println("New Balance: " + daniel.getBalance());
 			}
 			else
 			{
 				System.out.println();
 				System.out.println("-------------------------------------");
-				System.out.println("Make sure to give your money again soon, ya hear?");				
+				System.out.println("Make sure to give us your money again soon, ya hear? Sure hope we donn't invest it in the wrong things...");				
 			}
 
 		System.out.println();
 		System.out.println("-------------------------------------");
-		System.out.println("History of Transactions for user: "  + Budget.getID() + ": "+ Budget.getTransactionHistory());
+		System.out.println("History of Transactions for user "  + daniel.getID() + ": "+ daniel.getTransactionHistory());
 	}
 }

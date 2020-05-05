@@ -2,7 +2,6 @@
  * NOTES
  * 1. Must be STATIC to be accessed
 */
-
 import java.util.ArrayList;
 
 public class Budget 
